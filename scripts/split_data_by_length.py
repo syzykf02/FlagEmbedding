@@ -108,11 +108,13 @@ class SplitByLengthHandler:
 
         features = Features({
             'query': Value('string'),
+            'prompt': Value('string'),
             'pos': Sequence(Value('string')),
             'neg': Sequence(Value('string'))
         })
         kd_features = Features({
             'query': Value('string'),
+            'prompt': Value('string'),
             'pos': Sequence(Value('string')),
             'neg': Sequence(Value('string')),
             'pos_scores': Sequence(Value('float')),

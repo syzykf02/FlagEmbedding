@@ -144,3 +144,13 @@ pic2.py
 # results
 en_results
 zh_results
+
+# work
+work
+
+output
+
+LegalRerank/dataset/
+LegalRerank/*.json
+LegalRerank/*.jsonl
+LegalRerank/*.zip

@@ -14,8 +14,8 @@ eval_args="\
 "
 
 model_args="\
-    --embedder_name_or_path BAAI/bge-large-en-v1.5 \
-    --devices cuda:7 \
+    --embedder_name_or_path BAAI/bge-m3 \
+    --devices cuda:0 \
     --cache_dir $HF_HUB_CACHE \
 "
 

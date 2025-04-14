@@ -1,4 +1,5 @@
 export WANDB_MODE=disabled
+model_name=BAAI/bge-reranker-v2-m3
 
 train_data="\
     ../example_data/normal/examples.jsonl "
@@ -17,7 +18,7 @@ if [ -z "$HF_HUB_CACHE" ]; then
 fi
 
 model_args="\
-    --model_name_or_path BAAI/bge-reranker-base \
+    --model_name_or_path $model_name \
     --cache_dir $HF_HUB_CACHE \
 "
 
@@ -32,7 +33,7 @@ data_args="\
 "
 
 training_args="\
-    --output_dir ./test_encoder_only_base_bge-reranker-base \
+    --output_dir /data/zhangx/git/FlagEmbedding/output/$model_name \
     --overwrite_output_dir \
     --learning_rate 6e-5 \
     --fp16 \
